@@ -1,3 +1,115 @@
-// Place all the styles related to the manual controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+header{
+  height: 200px;
+  border-bottom: solid 2px blue;
+  display: flex;
+  .image-box{
+    height: 200px;
+    width: 200px;
+  }
+  .right-box{
+    height: 200px;
+    width: 200px;
+    .kanri-box{
+      height: 80px;
+      width: 120px;
+      line-height: 60px;
+      text-align: center;
+      border: solid burlywood;
+    }
+    .mypage-box{
+      height: 80px;
+      line-height: 60px;
+      text-align: center;
+      width: 120px;
+      border: solid burlywood;
+    }
+  }
+  .header-box{
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    height: 200px;
+    // margin: 0 auto;
+    width: 800px;
+    border-right: solid gray;
+    border-left: solid gray;
+    .title{
+      display: flex;
+      text-align: center;
+      height: 150px;
+      width: 800px;
+      p{
+        margin: 0 auto;
+        font-size:55px;
+        font-weight: bold;
+        // text-align: center;
+      }
+    }
+    .search-box{
+      position: absolute;
+      bottom: 40px;
+      left: 120px;
+      height: 50px;
+      width: 500px;
+      border: solid gray;
+      text-align: center;
+      font-size:20px;
+      line-height: 50px;
+      border-radius: 80px;
+    }
+  }
+}
+.body-header{
+  margin: 15px 0 15px 0;
+  font-size:30px;
+  text-align: center;
+  color:green;
+
+}
+.new-manualbox{
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  border-bottom: solid 2px blue;
+  .new-manual{
+  font-size:20px;
+  width: 300px;
+  height: 100px;
+  text-align: center;
+  // background: rebeccapurple;
+  border: solid 1px;
+  }
+}
+.manual-header{
+  font-size:30px;
+  text-align: center;
+  color: green;
+  margin: 10px 0 10px 0 ;
+}
+.manual-logobox{
+height: 200px;
+display: flex;
+justify-content: space-around;
+}
+.manual-categorybox{
+  height: 400px;
+  margin-top:10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+select{
+  -webkit-appearance: none;
+  appearance: none;
+  height: 50px;
+  width: 200px;
+  line-height: 50px;
+  font-size:20px;
+  border-radius: 10px;
+  border: solid 2px;
+  cursor: pointer;
+  text-align: center;
+}
+select:hover {
+  background-color: gold;
+}
+}
