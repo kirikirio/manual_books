@@ -1,0 +1,30 @@
+%header.new-header 
+  マニュアル新規投稿
+
+%body
+  .toukou-box
+  = form_with model: @manual do |f|
+    .name-box
+      = f.label :name do
+        マニュアルタイトル 
+        %span.hissu 必須
+      = f.text_field :name, {class: 'input-text'}
+    .main-box__select-group#size-area
+      = f.label :category do
+        サイズ
+        %span.optional 任意
+      %div
+        .select-box
+          = f.select :category,[["レジ"],["清掃"],["フライヤー"],["コーヒーマシン"],["接客"],["その他"]], prompt:"選択してくだい"
+    .image-area__input
+      = f.label :image do
+        %pre
+          ドラッグアンドドロップ
+          またはクリックしてファイルをアップロード
+        = f.file_field :image
+      %button{type: 'submit',class: 'submitBtn'}
+        投稿する
+-# = form_with model: @manual, url:manual_new_path do |f|
+
+
+
