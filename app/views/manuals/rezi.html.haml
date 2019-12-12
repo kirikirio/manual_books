@@ -1,0 +1,10 @@
+.rezi
+  レジのマニュアル一覧
+
+.rezi__manuals
+  - @rezi.each do |manual|
+    = link_to manuals_path(manual.id) do
+      .rezi__manuals__box
+        .new__items__container__box__item_body
+          %h3 
+            = manual.name

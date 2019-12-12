@@ -35,6 +35,10 @@ gem 'ancestry'
 gem 'ransack'
 gem 'active_hash'
 gem 'gretel'
+gem 'pry-rails'
+gem 'carrierwave'
+gem 'fog-aws'
+gem 'mini_magick'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
