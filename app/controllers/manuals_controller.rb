@@ -1,4 +1,7 @@
 class ManualsController < ApplicationController
+  
+  before_action :set_submodel, only: [:top, :rezi, :seisou, :cofee, :sekkyaku, :sonota]
+
   def index
     @manual = Manual.limit(5).where(params[:id]).order("created_at DESC")
   end
@@ -11,6 +14,8 @@ class ManualsController < ApplicationController
   end
   
   def show
+    @search_word = params[:search]
+    @searches = Manual.where('CONCAT(name,category) LIKE(?)', "%#{params[:search]}%").limit(50)
   
   end
 
@@ -20,24 +25,31 @@ class ManualsController < ApplicationController
     @manual.save
   end
 
+  def top
+
+  end
   def rezi
     @rezi = Manual.where(category:"レジ")
   end
 
   def seisou
-    rezi = Manual.where(category:"清掃")
+    @seisou = Manual.where(category:"清掃")
   end
   
+  def flyer
+    @flyer = Manual.where(category:"フライヤー")
+  end
+
   def cofee
-    rezi = Manual.where(category:"コーヒーマシン")
+    @cofee = Manual.where(category:"コーヒーマシン")
   end
 
   def sekkyaku
-    rezi = Manual.where(category:"接客")
+    @sekkyaku = Manual.where(category:"接客")
   end
 
   def sonota
-    rezi = Manual.where(category:"その他")
+    @sonota = Manual.where(category:"その他")
   end
 
 
@@ -51,5 +63,16 @@ class ManualsController < ApplicationController
                             :manual_status,
                               )
   end
+
+  def set_submodel
+    @rezi = Manual.where(category:"レジ")
+    @seisou = Manual.where(category:"清掃")
+    @flyer = Manual.where(category:"フライヤー")
+    @cofee = Manual.where(category:"コーヒーマシン")
+    @sekkyaku = Manual.where(category:"接客")
+    @sonota = Manual.where(category:"その他")
+  end
+
+
 end
 

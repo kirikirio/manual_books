@@ -1,0 +1,62 @@
+%body
+  %header
+    .logo-box
+      = image_tag 'animal_bear_character.png', :size =>'150x150'
+      (仮)
+    .header-box
+      .title
+        %p
+          %span{:style => "color:blue"} マ
+          %span{:style => "color:red"} ニ
+          %span{:style => "color:orange"} ュ
+          %span{:style => "color:blue"} ア
+          %span{:style => "color:green"} ル
+          %span{:style => "color:blue"} B
+          %span{:style => "color:red"} o
+          %span{:style => "color:orange"} o
+          %span{:style => "color:green"} k
+          %span{:style => "color:blue"} s
+      .search-box 
+        = form_with url: show_path do |form|
+          .contents__top__search--icon
+            = button_tag type: 'submit' do
+              = fa_icon 'search'
+          = form.text_field :search,{}
+    .right-box
+      .kanri-box 管理者ログイン
+      .mypage-box マイページ
+  .body-header 最近追加されたマニュアル（お知らせを入れるかも）
+  .new-manualbox
+    - @manual.each do |manual|
+      .new-manual
+        = link_to manuals_path(manual.id) do
+          %h3 
+            = manual.name
+  .manual-header カテゴリーから探す
+  .manual-logobox
+    .logo-box
+      = image_tag 'shopping_register_12006-300x225.png', :size =>'150x150', class:"gazou" 
+      　
+    .logo-box
+      = image_tag 'soijipanda.png', :size =>'140x140', class:"gazou" 
+      　
+    .logo-box
+      = image_tag '0027200_1.png', :size =>'140x140', class:"gazou" 
+      　
+    .logo-box
+      = image_tag '51q4OKELP3L._SY355_.png', :size =>'140x140', class:"gazou" 
+      　
+    .logo-box
+      = image_tag '450-20190629173348181017.jpg', :size =>'140x140', class:"gazou" 
+
+    .logo-box
+      = image_tag 'animal_bear_character.png', :size =>'140x140', class:"gazou" 
+      (仮)
+      　
+  .manual-categorybox
+    %a.select{ href: "manuals/rezi"} レジ
+    %a.select{ href: "manuals/seisou"} 清掃
+    %a.select{ href: "manuals/flyer"} フライヤー
+    %a.select{ href: "manuals/cofee"} コーヒーマシン
+    %a.select{ href: "manuals/sekkyaku"} 接客
+    %a.select{ href: "manuals/sonota"} その他

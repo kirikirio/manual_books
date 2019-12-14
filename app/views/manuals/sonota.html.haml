@@ -1,0 +1,9 @@
+.sonota-header
+  マニュアル一覧（その他）
+  .sonota-setumei
+    読みたいマニュアルをクリック👈
+.sonota__manuals
+  - @sonota.each do |manual|
+    .sonota__manuals__box
+      = link_to manuals_path(manual.id) do
+        = manual.name

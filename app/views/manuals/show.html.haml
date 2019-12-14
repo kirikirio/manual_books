@@ -1,0 +1,27 @@
+- if @searches.present?
+  .search-box 
+    = form_with url: show_path do |form|
+      .contents__top__search--icon
+        = button_tag type: 'submit' do
+          = fa_icon 'search'
+      = form.text_field :search,{}
+  .content
+    %section.new__items
+      .new__items-genre
+        %h3
+          = "#{@search_word}  の検索結果"
+    %section.new__items
+      .new__items__container
+        - @searches.each do |search|
+          = link_to manuals_path(search.id) do
+            .new__items__container__box
+              .new__items__container__box__item_body
+                %h3
+                  = search.name
+
+- else
+  .content
+    %section.new__items
+      .new__items-genre
+        %h3
+          該当する商品が見つかりません。検索条件を変えて、再度お試しください。

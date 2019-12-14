@@ -1,0 +1,69 @@
+.manual__all{
+  font-size:20px;
+}
+.manual__menu{
+  display: flex;
+  height: 200px;
+  text-align: center;
+  line-height: 60px;
+  .manual__box1 {
+    font-size: 20px;
+    font-weight: bold;
+    height: 100px;
+    width: 200px;
+    border: solid black 1px;
+  }
+  a{
+    text-decoration: none;
+  }
+}
+.category-box{
+.category-title{
+  display: flex;
+  .title_rezi{
+    font-size:22px;
+    font-weight: bold;
+    color: red;
+    margin-right: 30px;
+  }
+  .title_seisou{
+    font-size:22px;
+    font-weight: bold;
+    color: red;
+    margin-right: 30px;
+  }
+  .title_cofee{
+    font-size:22px;
+    font-weight: bold;
+    color: red;
+    margin-right: 30px;
+  }
+  .title_flyer{
+    font-size:22px;
+    font-weight: bold;
+    color: red;
+    margin-right: 30px;
+  }
+  .title_sekkyaku{
+    font-size:22px;
+    font-weight: bold;
+    color: red;
+    margin-right: 30px;
+  }
+  .title_sonota{
+    font-size:22px;
+    font-weight: bold;
+    color: red;
+    margin-right: 30px;
+  }
+  a{
+    text-decoration: none;
+    font-size:20px;
+    color:blue
+  }
+  a:hover{
+    color:red;
+    border-bottom: double 2px red;
+  }
+}
+}
