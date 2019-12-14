@@ -1,6 +1,7 @@
 class ManualsController < ApplicationController
   
   before_action :set_submodel, only: [:top, :rezi, :seisou, :cofee, :sekkyaku, :sonota]
+  before_action :set_search, only: [:index, :show]
 
   def index
     @manual = Manual.limit(5).where(params[:id]).order("created_at DESC")
@@ -12,11 +13,16 @@ class ManualsController < ApplicationController
     # @manuals = Manual.all
     # @manual = Manual.find(params[:id])
   end
+
+  # def search
+  #   binding.pry
+  #   @manuals = Manual.where('CONCAT(name) LIKE(?)', "%#{params[:search]}%").limit(20)
+  # end
+
   
-  def show
+  def list
     @search_word = params[:search]
-    @searches = Manual.where('CONCAT(name,category) LIKE(?)', "%#{params[:search]}%").limit(50)
-  
+    @searches = Manual.where('name LIKE(?)', "%#{params[:search]}%").limit(50)if @search_word.present?
   end
 
   def create
@@ -64,6 +70,10 @@ class ManualsController < ApplicationController
                               )
   end
 
+  def search_params
+    params.require(:q).permit(:gearname_or_title_or_review_cont)
+  end
+
   def set_submodel
     @rezi = Manual.where(category:"レジ")
     @seisou = Manual.where(category:"清掃")
@@ -73,6 +83,9 @@ class ManualsController < ApplicationController
     @sonota = Manual.where(category:"その他")
   end
 
+  def set_search
+    @search = Manual.ransack(params[:q])
+  end
 
 end
 

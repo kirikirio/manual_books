@@ -1,6 +1,6 @@
 - if @searches.present?
   .search-box 
-    = form_with url: show_path do |form|
+    = form_with url: list_path, local: true do |form|
       .contents__top__search--icon
         = button_tag type: 'submit' do
           = fa_icon 'search'

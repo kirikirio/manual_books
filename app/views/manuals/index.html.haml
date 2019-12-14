@@ -16,12 +16,12 @@
           %span{:style => "color:orange"} o
           %span{:style => "color:green"} k
           %span{:style => "color:blue"} s
-      .search-box 
-        = form_with url: show_path do |form|
-          .contents__top__search--icon
-            = button_tag type: 'submit' do
-              = fa_icon 'search'
-          = form.text_field :search,{}
+.main-header-wrapper
+  = form_with url: list_path, local: true do |form|
+    .main-header__search.col-lg-7.align-self-center.mt-2.mt-lg-0.ml-lg-3
+      = button_tag type: 'submit' do
+        = fa_icon 'search'
+      =  form.text_field :search, {class: 'form-control', placeholder: 'キーワードを入力'}
     .right-box
       .kanri-box 管理者ログイン
       .mypage-box マイページ
