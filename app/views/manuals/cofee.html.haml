@@ -1,0 +1,9 @@
+.cofee-header
+  マニュアル一覧（コーヒーマシン）
+  .cofee-setumei
+    読みたいマニュアルをクリック👈
+.cofee__manuals
+  - @cofee.each do |manual|
+    .cofee__manuals__box
+      = link_to manuals_path(manual.id) do
+        = manual.name

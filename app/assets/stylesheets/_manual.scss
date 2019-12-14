@@ -90,6 +90,18 @@ header{
 height: 200px;
 display: flex;
 justify-content: space-around;
+.logo-box{
+  height: 200px;
+  width: 200px;
+  background-color: rgba(0, 0, 0, 0.07);
+  border-radius: 50%;
+  .gazou{
+        display: block;
+        margin-top: 20px;
+        margin-left: auto;
+        margin-right: auto;
+  }
+}
 }
 .manual-categorybox{
   position: relative;
@@ -98,7 +110,10 @@ justify-content: space-around;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-select{
+    a{
+      text-decoration: none;
+    }
+.select{
   -webkit-appearance: none;
   appearance: none;
   height: 50px;
@@ -110,7 +125,7 @@ select{
   cursor: pointer;
   text-align: center;
 }
-select:hover {
+.select:hover {
   background-color: gold;
 }
 }

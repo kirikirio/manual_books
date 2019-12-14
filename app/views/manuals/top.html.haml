@@ -1,0 +1,85 @@
+%body
+  %header
+    .logo-box
+      = image_tag 'animal_bear_character.png', :size =>'150x150'
+      (仮)
+    .header-box
+      .title
+        %p
+          %span{:style => "color:blue"} マ
+          %span{:style => "color:red"} ニ
+          %span{:style => "color:orange"} ュ
+          %span{:style => "color:blue"} ア
+          %span{:style => "color:green"} ル
+          %span{:style => "color:blue"} B
+          %span{:style => "color:red"} o
+          %span{:style => "color:orange"} o
+          %span{:style => "color:green"} k
+          %span{:style => "color:blue"} s
+      .search-box マニュアルを検索   🔍
+    .right-box
+      .kanri-box 管理者ログイン
+      .mypage-box マイページ
+  .manual__all  マニュアル一覧    
+  .manual__menu  
+    %a.manual__box1{:href => "#1"}  レジ
+    %a.manual__box1{:href => "#2"} 清掃
+    %a.manual__box1{:href => "#3"} フライヤー
+    %a.manual__box1{:href => "#4"} コーヒーマシン
+    %a.manual__box1{:href => "#5"} 接客
+    %a.manual__box1{:href => "#6"} その他
+  .category-box
+    .category-title
+      #1
+      .title_rezi レジ
+      %a.button{:href => "#index"} Topへ戻る
+    .rezi__manuals
+      - @rezi.each do |manual|
+        .rezi__manuals__box
+          = link_to manuals_path(manual.id) do
+            = manual.name
+    .category-title
+      #2
+      .title_seisou 清掃
+      %a.button{:href => "#index"} Topへ戻る
+    .seisou__manuals
+      - @seisou.each do |manual|
+        .seisou__manuals__box
+          = link_to manuals_path(manual.id) do
+            = manual.name
+    .category-title
+      #3
+      .title_flyer フライヤー
+      %a.button{:href => "#index"} Topへ戻る
+    .flyer__manuals
+      - @flyer.each do |manual|
+        .flyer__manuals__box
+          = link_to manuals_path(manual.id) do
+            = manual.name
+    .category-title
+      #4
+      .title_cofee コーヒーマシン
+      %a.button{:href => "#index"} Topへ戻る
+    .cofee__manuals
+      - @cofee.each do |manual|
+        .cofee__manuals__box
+          = link_to manuals_path(manual.id) do
+            = manual.name
+    .category-title
+      #5
+      .title_sekkyaku 接客
+      %a.button{:href => "#index"} Topへ戻る
+    .sekkyaku__manuals
+      - @sekkyaku.each do |manual|
+        .sekkyaku__manuals__box
+          = link_to manuals_path(manual.id) do
+            = manual.name
+    .category-title
+      #6
+      .title_sonota その他
+      %a.button{:href => "#index"} Topへ戻る
+    .sonota__manuals
+      - @sonota.each do |manual|
+        .sonota__manuals__box
+          = link_to manuals_path(manual.id) do
+            = manual.name

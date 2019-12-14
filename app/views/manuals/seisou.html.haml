@@ -1,0 +1,9 @@
+.seisou-header
+  マニュアル一覧（清掃）
+  .seisou-setumei
+    読みたいマニュアルをクリック👈
+.seisou__manuals
+  - @seisou.each do |manual|
+    .seisou__manuals__box
+      = link_to manuals_path(manual.id) do
+        = manual.name
