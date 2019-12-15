@@ -45,17 +45,32 @@ header{
         // text-align: center;
       }
     }
+    button{
+      position: absolute;
+      right: 180px;
+      top: 120px;
+      cursor: pointer;
+      border: none;
+    .fa-search{
+      font-size: 20px;
+      }
+    }
     .search-box{
+      padding: 0 10px 0 15px;
       position: absolute;
       bottom: 40px;
       left: 120px;
       height: 50px;
       width: 500px;
       border: solid gray;
-      text-align: center;
+      text-align: left;
       font-size:20px;
       line-height: 50px;
       border-radius: 80px;
+    }
+    .search-box:focus{
+      border: outset 1px rgb(3, 136, 212);
+      outline: none;
     }
   }
 }

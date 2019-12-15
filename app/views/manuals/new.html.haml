@@ -1,18 +1,19 @@
-%header.new-header 
-  マニュアル新規投稿
+.new-header
+  = image_tag '2505.png',size:'80x80',class: 'sub-header-logo'
+  マニュアルSearch
 
-%body
+.toukou-mainbox
+  .new-box
+    %h3 マニュアル新規投稿
   .toukou-box
   = form_with model: @manual do |f|
-    .name-box
+    .name-box3
       = f.label :name do
         マニュアルタイトル 
-        %span.hissu 必須
       = f.text_field :name, {class: 'input-text'}
     .main-box__select-group#size-area
       = f.label :category do
-        サイズ
-        %span.optional 任意
+        マニュアルのカテゴリーを選択してください
       %div
         .select-box
           = f.select :category,[["レジ"],["清掃"],["フライヤー"],["コーヒーマシン"],["接客"],["その他"]], prompt:"選択してくだい"

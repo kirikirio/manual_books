@@ -1,6 +1,40 @@
 .new-header{
+  display: flex;
+  justify-content: center;
   text-align: center;
-  height: 30px;
-  font-size:20px;
+  padding: 0 100px 0 0;
+  height: 130px;
+  font-size:35px;
   font-weight: bold;
+  font-family: sans-serif;
+  line-height: 110px;
+  background: #eeeeee;
+  border-bottom: 5px solid #ffcc33;
+  img{
+    margin-top:15px;
+    margin-right: 10px;
+  }
+}
+.toukou-mainbox{
+  margin: 0 auto;
+  padding: 0 0 0 50px;
+  width: 700px;
+  .new-box{
+    height: 80px;
+    width: 700px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 60px;
+    margin-top: 10px;
+    box-shadow: 0px 0px 5px rgb(197, 60, 60);
+  }
+  .toukou-box{
+    width: 700px;
+  }
+  .name-box3{
+    width: 700px;
+    height: 100px;
+    color:red;
+  }
 }
