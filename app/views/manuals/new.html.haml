@@ -10,7 +10,8 @@
     .name-box3
       = f.label :name do
         マニュアルタイトル 
-      = f.text_field :name, {class: 'input-text'}
+      %div
+        = f.text_field :name, {class: 'input-text', placeholder: "マニュアル名（必須)"}
     .main-box__select-group#size-area
       = f.label :category do
         マニュアルのカテゴリーを選択してください
