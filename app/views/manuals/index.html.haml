@@ -23,8 +23,9 @@
           = button_tag type: 'submit' do
             = fa_icon 'search'
     .right-box
-      .kanri-box 管理者ログイン
-      .mypage-box マイページ
+      .kanri-box 管理者ログイン    
+      = link_to destroy_user_session_path, method: :delete do
+        %button.btn-logout{type: "submit"} ログアウト
   .body-header 最近追加されたマニュアル（お知らせを入れるかも）
   .new-manualbox
     - @manual.each do |manual|

@@ -26,6 +26,9 @@
         = f.file_field :image
       %button{type: 'submit',class: 'submitBtn'}
         投稿する
+
+    = link_to destroy_user_session_path, method: :delete do
+      %button.btn-logout{type: "submit"} ログアウト
 -# = form_with model: @manual, url:manual_new_path do |f|
 
 

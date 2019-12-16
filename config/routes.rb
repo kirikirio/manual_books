@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  root 'manuals#index'
+  devise_for :users
   get 'users/new'
   get 'manuals/rezi'
   get 'manuals/seisou'
