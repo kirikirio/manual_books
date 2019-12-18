@@ -9,27 +9,27 @@
   = form_with model: @manual do |f|
     .name-box3
       = f.label :name do
-        マニュアルタイトル 
+        マニュアルタイトルを入力してください
       %div
         = f.text_field :name, {class: 'input-text', placeholder: "マニュアル名（必須)"}
-    .main-box__select-group#size-area
+    .category-box-new
       = f.label :category do
         マニュアルのカテゴリーを選択してください
       %div
-        .select-box
-          = f.select :category,[["レジ"],["清掃"],["フライヤー"],["コーヒーマシン"],["接客"],["その他"]], prompt:"選択してくだい"
-    .image-area__input
+        = f.select :category,[["レジ"],["清掃"],["フライヤー"],["コーヒーマシン"],["接客"],["その他"]], prompt:"選択してくだい"
+    .pdf-area
+      %p PDFファイルを選択してくだい
       = f.label :image do
-        %pre
-          ドラッグアンドドロップ
-          またはクリックしてファイルをアップロード
-        = f.file_field :image
-      %button{type: 'submit',class: 'submitBtn'}
-        投稿する
+        .testo PDFファイルをドラッグ&クリックでアップロード
+      %div
+        = f.file_field :image,{class: 'input-image'}
+        = image_tag '2505.png', id: :img_prev
 
-    = link_to destroy_user_session_path, method: :delete do
-      %button.btn-logout{type: "submit"} ログアウト
--# = form_with model: @manual, url:manual_new_path do |f|
+
+    %button{type: 'submit',class: 'submitBtn'}
+      投稿する
+
+
 
 
 
