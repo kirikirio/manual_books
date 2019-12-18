@@ -2,11 +2,13 @@ class ManualsController < ApplicationController
   
   before_action :set_submodel, only: [:top, :rezi, :seisou, :cofee, :sekkyaku, :sonota]
   before_action :set_search, only: [:index, :show]
+  
 
   def index
     @manual = Manual.limit(5).where(params[:id]).order("created_at DESC")
   end
   def new
+    @users = User.all
     @manual = Manual.new
     # @manual.image.image.build
     
@@ -86,6 +88,7 @@ class ManualsController < ApplicationController
   def set_search
     @search = Manual.ransack(params[:q])
   end
+
 
 end
 

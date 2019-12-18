@@ -35,6 +35,63 @@
   .name-box3{
     width: 700px;
     height: 100px;
-    color:red;
+    color:black;
+    font-weight: bold;
+    margin-top:10px;
+    label{
+      font-size:20px;
+      background: rgb(205, 216, 143);
+    }
+    .input-text{
+      height: 40px;
+      font-size:18px;
+      margin-top:10px;
+    }
+  }
+  .category-box-new{
+    font-size:20px;
+    font-weight: bold;
+    label{
+    background: rgb(205, 216, 143)
+    }
+    #manual_category{
+  -webkit-appearance: none;
+	-moz-appearance: none;
+  appearance: none;
+  font-size:18px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin: 8px 0 0;
+  padding: 0 16px;
+  height: 48px;
+  width: 400px;
+  cursor:pointer;
+    }
+  }
+  .pdf-area{
+    margin-top:10px;
+    P{
+      background: rgb(205, 216, 143);
+      font-size:20px;
+      font-weight: bold;
+    }
+    .testo{
+      border: 1px dashed #ccc;
+      line-height: 50px;
+      text-align: center;
+      height: 50px;
+      width: 400px;
+      background: #eeeeee;
+    }
+    }
+    .input-image{
+      display: none;
+    }
+  .submitBtn{
+    font-size:20px;
+    margin-left:180px;
+    margin-top:20px;
+    height: 60px;
+    width: 220px;
   }
 }
