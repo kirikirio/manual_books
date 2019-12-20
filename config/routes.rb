@@ -17,6 +17,10 @@ Rails.application.routes.draw do
   # get 'manual/index'
   # # get 'manual/new'
   # post 'manual/create'
-  resources :manuals, only: [:index, :new, :create,:list] 
+  resources :manuals, only: [:index, :create,:list] 
+    
+  namespace :admin do
+    resources :manuals
+  end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

@@ -7,6 +7,7 @@ class ManualsController < ApplicationController
   def index
     @manual = Manual.limit(5).where(params[:id]).order("created_at DESC")
   end
+
   def new
     @users = User.all
     @manual = Manual.new
@@ -16,10 +17,11 @@ class ManualsController < ApplicationController
     # @manual = Manual.find(params[:id])
   end
 
-  # def search
-  #   binding.pry
-  #   @manuals = Manual.where('CONCAT(name) LIKE(?)', "%#{params[:search]}%").limit(20)
-  # end
+  def show
+    
+  end
+
+
 
   
   def list

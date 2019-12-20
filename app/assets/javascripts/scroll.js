@@ -1,4 +1,5 @@
 $(function () {
+  console.log($)
   // #で始まるアンカーをクリックした場合に処理
   $('a[href^="#"]').click(function () {
     console.log('fire')
