@@ -30,7 +30,7 @@
   .new-manualbox
     - @manual.each do |manual|
       .new-manual
-        = link_to manuals_path(manual.id) do
+        = link_to manual_path(manual.id) do
           %h3 
             = manual.name
   .manual-header カテゴリーから探す
