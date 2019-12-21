@@ -19,12 +19,7 @@ class Admin::ManualsController < ApplicationController
     @pdffile = Manual.find(params[:id]) 
   end
 
-  def downloadpdf
-  myfile=Myfile.find(params[:id])
-  filepath = Rails.root.join('public',myfile.filename)
-  stat = File::stat(filepath)
-  send_file(filepath, :filename => myfile.filename, :length => stat.size)
-end
+
 
 
   def manual_params

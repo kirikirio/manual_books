@@ -18,6 +18,7 @@ class ManualsController < ApplicationController
   end
 
   def show
+    @manual = Manual.find(params[:id])
     @pdffile = Manual.find(params[:id]) 
   end
 

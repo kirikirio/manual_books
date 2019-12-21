@@ -1,23 +1,49 @@
 .manual__all{
-  font-size:20px;
+  font-size:30px;
+  font-weight: bold;
+  text-align: center;
+  height: 40px;
+  margin-top:20px;
+  margin-bottom: 20px;
+  p{
+    margin: 0 auto;
+    width: 300px;
+    background: rgb(255, 80, 80);
+    border: solid black 1px;
+    color: #f7f4f4;
+  }
 }
 .manual__menu{
   display: flex;
-  height: 200px;
+  height: 110px;
+  margin-top:10px;
   text-align: center;
   line-height: 60px;
   .manual__box1 {
     font-size: 20px;
     font-weight: bold;
-    height: 100px;
+    margin-top: 10px;
+    margin-left:15px;
+    margin-right: 5px;
+    border-radius: 5%;
+    height: 80px;
     width: 200px;
-    border: solid black 1px;
+    background: rgb(197, 230, 176);
   }
+  .manual__box1:hover {
+  background-color: gold;
+}
   a{
     text-decoration: none;
   }
 }
+.setumei-box{
+  text-align: center;
+  color: red;
+  font-size:20px;
+}
 .category-box{
+  margin-top:10px;
 .category-title{
   display: flex;
   .title_rezi{
@@ -55,6 +81,9 @@
     font-weight: bold;
     color: red;
     margin-right: 30px;
+  }
+  span{
+    font-size:20px;
   }
   a{
     text-decoration: none;

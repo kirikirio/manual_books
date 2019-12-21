@@ -9,6 +9,7 @@ $(function () {
     }
   }
   $('.input-image').change(function () {
+    console.log('fire')
     readURL(this);
   });
 });

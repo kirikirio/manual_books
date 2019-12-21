@@ -4,6 +4,10 @@
   text-align: center;
   font-weight: bold;
   margin-top: 30px;
+  border-bottom: 5px solid #ffcc33;
+  span{
+    color:red;
+  }
   .rezi-setumei{
     margin-top:60px;
   }
@@ -16,13 +20,14 @@
   text-align: center;
   font-size: 18px;
   font-weight: bold;
-  border-radius: 10%;
-  border: solid 0.5px;
-  // color: skyblue;
   height: 70px;
   width: 200px;
-  background: rgba(0,0,0,0.08);
-  margin-right: 10px;
+  line-height: 40px;
+  border-radius: 5%;
+  background: rgb(188, 229, 245);
+  margin-right: 5px;
+  margin-left:15px;
+  cursor: pointer;
   a{
     display: block;
     text-decoration: none;

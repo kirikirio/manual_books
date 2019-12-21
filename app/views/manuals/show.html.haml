@@ -1,1 +1,10 @@
-%object.pdf{ data: url_for(@pdffile.image.to_s) , height: "800",width:"1500"}
+.header-show 
+  マニュアル詳細
+.manual-name
+  = @manual.name
+
+.pdf-box
+  %object.pdf{ data: url_for(@pdffile.image.to_s) , height: "600",width:"600"}
+  .setumei
+    ⬅️のPDFファイル上部からダウンロード
+    %br または確認
