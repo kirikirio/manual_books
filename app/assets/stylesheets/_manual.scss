@@ -1,7 +1,12 @@
 header{
   height: 200px;
-  border-bottom: solid 2px blue;
   display: flex;
+  justify-content: space-around;
+  border-bottom: 4px solid #96ee23;
+  .logo-box{
+    margin-top:20px;
+    margin-left:20px;
+  }
   .image-box{
     height: 200px;
     width: 200px;
@@ -9,13 +14,22 @@ header{
   .right-box{
     height: 200px;
     width: 200px;
+    margin-top:10px;
     .kanri-box{
-      height: 80px;
-      width: 120px;
+      font-size:18px;
+      height: 70px;
+      width: 180px;
       line-height: 60px;
       text-align: center;
       border: solid burlywood;
+      margin-bottom: -5px;
     }
+    .btn-logout{
+      font-size:18px;
+      height: 70px;
+      width: 185px;
+      border: solid burlywood;
+        }
     .mypage-box{
       height: 80px;
       line-height: 60px;
@@ -26,13 +40,8 @@ header{
   }
   .header-box{
     position: relative;
-    margin: 0 auto;
     display: flex;
     height: 200px;
-    // margin: 0 auto;
-    width: 800px;
-    border-right: solid gray;
-    border-left: solid gray;
     .title{
       display: flex;
       text-align: center;
@@ -76,29 +85,51 @@ header{
 }
 .body-header{
   margin: 15px 0 15px 0;
-  font-size:30px;
+  font-size:34px;
   text-align: center;
-  color:green;
+  color:red;
+  font-family: monospace;
+  span{
+    color: rgb(20, 121, 70);
+    font-family: initial;
+  }
 
 }
 .new-manualbox{
   height: 200px;
   display: flex;
-  justify-content: center;
-  border-bottom: solid 2px blue;
+  position: relative;
+  justify-content: space-around;
   .new-manual{
-  font-size:20px;
-  width: 300px;
-  height: 100px;
-  text-align: center;
-  // background: rebeccapurple;
-  border: solid 1px;
+    position:relative;
+    font-size:20px;
+    width: 300px;
+    height: 120px;
+    text-align: center;
+    background-color: rgba(250, 173, 173, 0.07);
+    border: solid 1px;
+    a{
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      display: block;
+    }
+    div{
+      font-size:20px;
+      position: absolute;
+      bottom: -30px;
+      left: 40px;
+    }
+  }
+  .new-manual:hover{
+    background-color: gold;
   }
 }
 .manual-header{
-  font-size:30px;
+  font-size:34px;
   text-align: center;
-  color: green;
+  color: red;
+  font-family: monospace;
   margin: 10px 0 10px 0 ;
 }
 .manual-logobox{
@@ -120,7 +151,6 @@ justify-content: space-around;
 }
 .manual-categorybox{
   position: relative;
-  height: 400px;
   margin-top:10px;
   display: flex;
   flex-wrap: wrap;
@@ -143,4 +173,20 @@ justify-content: space-around;
 .select:hover {
   background-color: gold;
 }
+}
+.setumei-box-index{
+  text-align: center;
+  p{
+    font-size:20px;
+  }
+  span{
+    margin-top: 20px;
+    font-size:20px;
+    color:red;
+    text-align: center;
+  }
+}
+.footer-btn{
+  width: 200px;
+  height: 200px;
 }

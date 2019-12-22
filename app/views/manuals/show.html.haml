@@ -1,10 +1,10 @@
-.header-show 
-  マニュアル詳細
-.manual-name
-  = @manual.name
-
-.pdf-box
-  %object.pdf{ data: url_for(@pdffile.image.to_s) , height: "600",width:"600"}
-  .setumei
-    ⬅️のPDFファイル上部からダウンロード
-    %br または確認
+= render 'shared/sub-header'
+.show-main-box
+  .show-box
+    .manual-name
+      = @manual.name
+    .pdf-box
+      %object.pdf{ data: url_for(@pdffile.image.to_s) , height: "600",width:"600"}
+      .setumei
+        ⬅️のPDFファイル上部からダウンロード
+        %br または確認

@@ -5,7 +5,7 @@ class ManualsController < ApplicationController
   
 
   def index
-    @manual = Manual.limit(5).where(params[:id]).order("created_at DESC")
+    @manual = Manual.limit(4).where(params[:id]).order("created_at DESC")
   end
 
   def new

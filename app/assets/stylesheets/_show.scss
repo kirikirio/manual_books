@@ -1,31 +1,30 @@
-.header-show{
-  height: 60px;
-  font-size:30px;
-  font-weight: bold;
-  text-align: center;
-  border-bottom: 3px solid #ffcc33;
-  background: #eeeeee;
-  line-height: 50px;
-}
-.manual-name{
-  text-align: center;
-  margin: 15px 0 15px 0 ;
-  height: 40px;
-  font-size:30px;
-  font-weight: bold;
-  font-family: 'Anton', sans-serif;
-  color:blue;
-  
-}
-.pdf-box{
-  border-top: 3px solid #ffcc33;
-  display: flex;
-  object{
-    margin-left: 300px;
+.show-main-box{
+  background: #f7eded;
+  .show-box{
+  height: 800px;
+  width: 1100px;
+  margin: 0 auto;
+  background: white;
+  .manual-name{
+    text-align: center;
+    margin: 0px 0 15px 0 ;
+    height: 40px;
+    font-size:30px;
+    font-weight: bold;
+    font-family: 'Anton', sans-serif;
+    color:blue;
+    
   }
-  .setumei{
-    font-size: 20px;
-    margin-left:40px;
-
+  .pdf-box{
+    display: flex;
+    object{
+      margin-left:30px;
+    }
+    .setumei{
+      font-size: 20px;
+      margin-left:40px;
+      
+    }
   }
+}
 }

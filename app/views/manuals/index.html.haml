@@ -25,8 +25,10 @@
     .right-box
       .kanri-box 管理者ログイン    
       = link_to destroy_user_session_path, method: :delete do
-        %button.btn-logout{type: "submit"} ログアウト
-  .body-header 最近追加されたマニュアル（お知らせを入れるかも）
+        %button{type: "submit",class: 'btn-logout'} ログアウト
+  .body-header 
+    最近追加されたマニュアル
+    %span (4件)
   .new-manualbox
     - @manual.each do |manual|
       .new-manual
@@ -61,3 +63,8 @@
     %a.select{ href: "manuals/cofee"} コーヒーマシン
     %a.select{ href: "manuals/sekkyaku"} 接客
     %a.select{ href: "manuals/sonota"} その他
+  .setumei-box-index 
+    %p 
+      ↖️
+      %span 読みたいマニュアルのカテゴリーを選択する
+  = render 'shared/footer'
