@@ -19,7 +19,7 @@
       .top__search
         = form_with url: list_path, local: true do |form|
           .serach-icon
-            =  form.text_field :search, {class: 'search-box', placeholder: 'キーワードを入力'}
+            =  form.text_field :search, {class: 'search-box', placeholder: 'キーワードを入力して検索'}
           = button_tag type: 'submit' do
             = fa_icon 'search'
     .right-box
@@ -35,6 +35,15 @@
         = link_to manual_path(manual.id) do
           %h3 
             = manual.name
+  .new-box 
+    .new-name-box new!
+    .new-name-box new!
+    .new-name-box new!
+    .new-name-box new!
+  .setumei-box-index 
+    %p 
+      ↖️
+      %span 読みたいマニュアルを選択
   .manual-header カテゴリーから探す
   .manual-logobox
     .logo-box
@@ -66,5 +75,5 @@
   .setumei-box-index 
     %p 
       ↖️
-      %span 読みたいマニュアルのカテゴリーを選択する
+      %span 読みたいマニュアルのカテゴリーを選択
   = render 'shared/footer'
