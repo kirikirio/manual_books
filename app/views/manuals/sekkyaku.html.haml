@@ -4,8 +4,9 @@
   %span（接客）
   .sekkyaku-setumei
     読みたいマニュアルをクリック👈
-.sekkyaku__manuals
+.sekkyaku__manual
   - @sekkyaku.each do |manual|
-    .sekkyaku__manuals__box
-      = link_to manuals_path(manual.id) do
+    .sekkyaku__manual__box
+      = link_to manual_path(manual.id) do
         = manual.name
+= render 'shared/footer'

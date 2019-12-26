@@ -12,7 +12,7 @@
     margin-top:60px;
   }
 }
-.seisou__manuals{
+.seisou__manual{
   display: flex;
   flex-wrap: wrap;
   margin: 20px 0 20px 0;
@@ -30,7 +30,9 @@
   a{
     display: block;
     text-decoration: none;
-    margin-top:10px;
+    margin-top:10px;    
+    height: 100%;
+    width: 100%;
   }
 }
   &__box:hover {

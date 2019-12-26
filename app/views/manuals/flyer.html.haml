@@ -4,8 +4,9 @@
   %span（コーヒーマシン）
   .cofee-setumei
     読みたいマニュアルをクリック👈
-    .flyer__manuals
+    .flyer__manual
       - @flyer.each do |manual|
-        .flyer__manuals__box
-          = link_to manuals_path(manual.id) do
+        .flyer__manual__box
+          = link_to manual_path(manual.id) do
             = manual.name
+= render 'shared/footer'

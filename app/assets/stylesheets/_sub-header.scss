@@ -1,0 +1,21 @@
+.sub-header{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 0 100px 0 0;
+  height: 130px;
+  font-size:35px;
+  font-weight: bold;
+  font-family: sans-serif;
+  line-height: 110px;
+  background: #eeeeee;
+  border-bottom: 5px solid #ffcc33;
+  img{
+    margin-top:15px;
+    margin-right: 10px;
+  }
+  a{
+    color:black;
+    text-decoration: none;
+  }
+}

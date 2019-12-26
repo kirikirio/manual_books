@@ -4,8 +4,9 @@
   %span（レジ）
   .rezi-setumei
     読みたいマニュアルをクリック👈
-.rezi__manuals
+.rezi__manual
   - @rezi.each do |manual|
-    .rezi__manuals__box
-      = link_to manuals_path(manual.id) do
+    .rezi__manual__box
+      = link_to manual_path(manual.id) do
         = manual.name
+= render 'shared/footer'

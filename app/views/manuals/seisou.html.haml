@@ -4,8 +4,9 @@
   %span（清掃）
   .seisou-setumei
     読みたいマニュアルをクリック👈
-.seisou__manuals
+.seisou__manual
   - @seisou.each do |manual|
-    .seisou__manuals__box
-      = link_to manuals_path(manual.id) do
+    .seisou__manual__box
+      = link_to manual_path(manual.id) do
         = manual.name
+= render 'shared/footer'

@@ -23,7 +23,8 @@
           = button_tag type: 'submit' do
             = fa_icon 'search'
     .right-box
-      .kanri-box 管理者ログイン    
+      = link_to new_admin_manual_path, method: :get do
+        .kanri-box 管理者ログイン    
       = link_to destroy_user_session_path, method: :delete do
         %button{type: "submit",class: 'btn-logout'} ログアウト
   .body-header 
@@ -35,7 +36,7 @@
         = link_to manual_path(manual.id) do
           %h3 
             = manual.name
-  .new-box 
+  .new-box-index 
     .new-name-box new!
     .new-name-box new!
     .new-name-box new!
@@ -64,7 +65,6 @@
     .logo-box
       = image_tag 'animal_bear_character.png', :size =>'140x140', class:"gazou" 
       (仮)
-      　
   .manual-categorybox
     %a.select{ href: "manuals/rezi"} レジ
     %a.select{ href: "manuals/seisou"} 清掃

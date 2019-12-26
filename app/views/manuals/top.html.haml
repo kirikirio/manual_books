@@ -16,9 +16,9 @@
       .title_rezi レジ
       %span (読みたいマニュアルをクリック👆)
       %a.button{:href => "#index"} Topへ戻る
-    .rezi__manuals
+    .rezi__manual
       - @rezi.each do |manual|
-        .rezi__manuals__box
+        .rezi__manual__box
           = link_to manual_path(manual.id) do
             = manual.name
     .category-title
@@ -26,9 +26,9 @@
       .title_seisou 清掃
       %span (読みたいマニュアルをクリック👆)
       %a.button{:href => "#index"} Topへ戻る
-    .seisou__manuals
+    .seisou__manual
       - @seisou.each do |manual|
-        .seisou__manuals__box
+        .seisou__manual__box
           = link_to manual_path(manual.id) do
             = manual.name
     .category-title
@@ -36,9 +36,9 @@
       .title_flyer フライヤー
       %span (読みたいマニュアルをクリック👆)
       %a.button{:href => "#index"} Topへ戻る
-    .flyer__manuals
+    .flyer__manual
       - @flyer.each do |manual|
-        .flyer__manuals__box
+        .flyer__manual__box
           = link_to manual_path(manual.id) do
             = manual.name
     .category-title
@@ -46,7 +46,7 @@
       .title_cofee コーヒーマシン
       %span (読みたいマニュアルをクリック👆)
       %a.button{:href => "#index"} Topへ戻る
-    .cofee__manuals
+    .cofee__manual
       - @cofee.each do |manual|
         .cofee__manuals__box
           = link_to manual_path(manual.id) do
@@ -56,9 +56,9 @@
       .title_sekkyaku 接客
       %span (読みたいマニュアルをクリック👆)
       %a.button{:href => "#index"} Topへ戻る
-    .sekkyaku__manuals
+    .sekkyaku__manual
       - @sekkyaku.each do |manual|
-        .sekkyaku__manuals__box
+        .sekkyaku__manual__box
           = link_to manual_path(manual.id) do
             = manual.name
     .category-title
@@ -66,8 +66,9 @@
       .title_sonota その他
       %span (読みたいマニュアルをクリック👆)
       %a.button{:href => "#index"} Topへ戻る
-    .sonota__manuals
+    .sonota__manual
       - @sonota.each do |manual|
-        .sonota__manuals__box
+        .sonota__manual__box
           = link_to manual_path(manual.id) do
             = manual.name
+      = render 'shared/footer'

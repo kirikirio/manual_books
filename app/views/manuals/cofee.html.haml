@@ -7,5 +7,6 @@
 .cofee__manuals
   - @cofee.each do |manual|
     .cofee__manuals__box
-      = link_to manuals_path(manual.id) do
+      = link_to manual_path(manual.id) do
         = manual.name
+= render 'shared/footer'

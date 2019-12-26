@@ -15,6 +15,9 @@ header{
     height: 200px;
     width: 200px;
     margin-top:10px;
+    a{
+      text-decoration: none;
+    }
     .kanri-box{
       font-size:18px;
       height: 70px;
@@ -111,6 +114,8 @@ header{
     background-color: rgba(250, 173, 173, 0.07);
     border: solid 1px;
     a{
+      cursor: pointer;
+      text-decoration: none;
       position: absolute;
       height: 100%;
       width: 100%;
@@ -127,7 +132,7 @@ header{
     background-color: gold;
   }
 }
-.new-box{
+.new-box-index{
   display: flex;
   justify-content: space-around;
   color:red;
@@ -197,22 +202,4 @@ justify-content: space-around;
     color:red;
     text-align: center;
   }
-}
-.footer{
-  width: 100%;
-  background: #eeeeee;
-.footer-btn{
-  display: block;
-  margin:0 auto;
-  width: 200px;
-  height: 200px;
-  background: red;
-  color:white;
-  font-size:35px;
-  font-weight:bold;
-  cursor: pointer;
-}
-a{
-  text-decoration: none;
-}
 }
