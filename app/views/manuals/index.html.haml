@@ -22,11 +22,18 @@
             =  form.text_field :search, {class: 'search-box', placeholder: 'キーワードを入力して検索'}
           = button_tag type: 'submit' do
             = fa_icon 'search'
-    .right-box
-      = link_to new_admin_manual_path, method: :get do
-        .kanri-box 管理者ログイン    
-      = link_to destroy_user_session_path, method: :delete do
-        %button{type: "submit",class: 'btn-logout'} ログアウト
+    - if user_signed_in?
+      .right-box
+        = link_to new_admin_manual_path, method: :get do
+          .kanri-box 管理者ページ    
+        = link_to destroy_user_session_path, method: :delete do
+          %button{type: "submit",class: 'btn-logout'} ログアウト
+    - else
+      .right-box  
+        = link_to new_user_registration_path, method: :get do
+          %button{type: "submit",class: 'btn-logout'} 新規登録
+        = link_to new_user_session_path, method: :get do
+          %button{type: "submit",class: 'btn-logout'} ログイン
   .body-header 
     最近追加されたマニュアル
     %span (4件)
