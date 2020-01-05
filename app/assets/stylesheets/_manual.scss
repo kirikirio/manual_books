@@ -15,10 +15,14 @@ header{
         border: solid 1px gray;
         display: block;
         background: red;
-      text-decoration: none;
-      color:white;
-      border-radius: 5px;
+        padding: 2px 5px 2px 5px;
+        text-decoration: none;
+        color:white;
+        border-radius: 5px;
     }
+    a:hover{
+      opacity: 0.5;
+    } 
   }
   }
   .right-box{
@@ -117,7 +121,7 @@ header{
   color:blue;
   font-family: monospace;
   span{
-    color: rgb(20, 121, 70);
+    color: red;
     font-family: initial;
   }
 
@@ -133,8 +137,8 @@ header{
     width: 300px;
     height: 120px;
     text-align: center;
-    background-color: rgba(250, 173, 173, 0.07);
-    border: solid 1px;
+    border-radius: 10px;
+    border: solid 3px rgb(61, 89, 247);
     a{
       cursor: pointer;
       text-decoration: none;
@@ -142,7 +146,7 @@ header{
       height: 100%;
       width: 100%;
       display: block;
-      color:green;
+      color:rgb(61, 89, 247);
     }
     div{
       font-size:20px;
@@ -152,7 +156,7 @@ header{
     }
   }
   .new-manual:hover{
-    opacity: 0.5;
+    background-color: gold;
   }
 }
 .new-box-index{
