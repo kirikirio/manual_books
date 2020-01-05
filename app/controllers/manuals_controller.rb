@@ -41,23 +41,23 @@ class ManualsController < ApplicationController
 
   end
   def rezi
-    @rezi = Manual.where(category:"レジ")
+    @rezi = Manual.where(category:"接客・販売")
   end
 
   def seisou
-    @seisou = Manual.where(category:"清掃")
+    @seisou = Manual.where(category:"カウンター内")
   end
   
   def flyer
-    @flyer = Manual.where(category:"フライヤー")
+    @flyer = Manual.where(category:"清掃")
   end
 
   def cofee
-    @cofee = Manual.where(category:"コーヒーマシン")
+    @cofee = Manual.where(category:"発注")
   end
 
   def sekkyaku
-    @sekkyaku = Manual.where(category:"接客")
+    @sekkyaku = Manual.where(category:"ロッピー")
   end
 
   def sonota
@@ -81,11 +81,11 @@ class ManualsController < ApplicationController
   end
 
   def set_submodel
-    @rezi = Manual.where(category:"レジ")
-    @seisou = Manual.where(category:"清掃")
-    @flyer = Manual.where(category:"フライヤー")
-    @cofee = Manual.where(category:"コーヒーマシン")
-    @sekkyaku = Manual.where(category:"接客")
+    @rezi = Manual.where(category:"接客・販売")
+    @seisou = Manual.where(category:"カウンター内")
+    @flyer = Manual.where(category:"清掃")
+    @cofee = Manual.where(category:"発注")
+    @sekkyaku = Manual.where(category:"ロッピー")
     @sonota = Manual.where(category:"その他")
   end
 

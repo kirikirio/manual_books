@@ -1,7 +1,11 @@
 %body
   %header
     .logo-box
-      = image_tag '2505.png', size: '150x150'
+      .image-box
+        = image_tag '2505.png', size: '150x140'
+      .link-box
+        = link_to manuals_top_path, method: :get do
+          マニュアル一覧ページへ
     .header-box
       .title
         %p
@@ -55,29 +59,29 @@
   .manual-header カテゴリーから探す
   .manual-logobox
     .logo-box
-      = image_tag 'shopping_register_12006-300x225.png', :size =>'150x150', class:"gazou" 
+      = image_tag '732dbdb6a18a3528b3d31e09243e22ac.png', :size =>'150x150', class:"gazou" 
+      　
+    .logo-box
+      = image_tag 'shopping_register_12006-300x225.png', :size =>'140x140', class:"gazou" 
       　
     .logo-box
       = image_tag 'soijipanda.png', :size =>'140x140', class:"gazou" 
       　
     .logo-box
-      = image_tag '0027200_1.png', :size =>'140x140', class:"gazou" 
+      = image_tag '982fa33493f56fadba6771783bd1ea56_w.png', :size =>'140x140', class:"gazou" 
       　
-    .logo-box
-      = image_tag '51q4OKELP3L._SY355_.png', :size =>'140x140', class:"gazou" 
-      　
-    .logo-box
-      = image_tag '450-20190629173348181017.jpg', :size =>'140x140', class:"gazou" 
+    .logo-box2
+      = image_tag 'loppi_000.png', :size =>'130x130', class:"gazou" 
 
     .logo-box
       = image_tag 'animal_bear_character.png', :size =>'140x140', class:"gazou" 
       (仮)
   .manual-categorybox
-    %a.select{ href: "manuals/rezi"} レジ
-    %a.select{ href: "manuals/seisou"} 清掃
-    %a.select{ href: "manuals/flyer"} フライヤー
-    %a.select{ href: "manuals/cofee"} コーヒーマシン
-    %a.select{ href: "manuals/sekkyaku"} 接客
+    %a.select{ href: "manuals/rezi"} 接客・販売
+    %a.select{ href: "manuals/seisou"} カウンター内
+    %a.select{ href: "manuals/flyer"} 清掃
+    %a.select{ href: "manuals/cofee"} 発注
+    %a.select{ href: "manuals/sekkyaku"} ロッピー
     %a.select{ href: "manuals/sonota"} その他
   .setumei-box-index 
     %p 

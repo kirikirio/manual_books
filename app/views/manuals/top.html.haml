@@ -3,17 +3,17 @@
   .manual__all  
     %p マニュアル一覧    
   .manual__menu  
-    %a.manual__box1{:href => "#1"}  レジ
-    %a.manual__box1{:href => "#2"} 清掃
-    %a.manual__box1{:href => "#3"} フライヤー
-    %a.manual__box1{:href => "#4"} コーヒーマシン
-    %a.manual__box1{:href => "#5"} 接客
+    %a.manual__box1{:href => "#1"}  接客・販売
+    %a.manual__box1{:href => "#2"} カウンター内
+    %a.manual__box1{:href => "#3"} 清掃
+    %a.manual__box1{:href => "#4"} 発注
+    %a.manual__box1{:href => "#5"} ロッピー
     %a.manual__box1{:href => "#6"} その他
   .setumei-box ↖️マニュアルのカテゴリーを選択するとそこまで飛べます
   .category-box
     .category-title
       #1
-      .title_rezi レジ
+      .title_rezi 接客・販売
       %span (読みたいマニュアルをクリック👆)
       %a.button{:href => "#index"} Topへ戻る
     .rezi__manual
@@ -23,7 +23,7 @@
             = manual.name
     .category-title
       #2
-      .title_seisou 清掃
+      .title_seisou カウンター内
       %span (読みたいマニュアルをクリック👆)
       %a.button{:href => "#index"} Topへ戻る
     .seisou__manual
@@ -33,7 +33,7 @@
             = manual.name
     .category-title
       #3
-      .title_flyer フライヤー
+      .title_flyer 清掃
       %span (読みたいマニュアルをクリック👆)
       %a.button{:href => "#index"} Topへ戻る
     .flyer__manual
@@ -43,7 +43,7 @@
             = manual.name
     .category-title
       #4
-      .title_cofee コーヒーマシン
+      .title_cofee 発注
       %span (読みたいマニュアルをクリック👆)
       %a.button{:href => "#index"} Topへ戻る
     .cofee__manual
@@ -53,7 +53,7 @@
             = manual.name
     .category-title
       #5
-      .title_sekkyaku 接客
+      .title_sekkyaku ロッピー
       %span (読みたいマニュアルをクリック👆)
       %a.button{:href => "#index"} Topへ戻る
     .sekkyaku__manual
