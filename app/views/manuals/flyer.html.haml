@@ -4,9 +4,9 @@
   %span（清掃）
   .cofee-setumei
     読みたいマニュアルをクリック👈
-    .flyer__manual
-      - @flyer.each do |manual|
-        .flyer__manual__box
-          = link_to manual_path(manual.id) do
-            = manual.name
+.flyer__manual
+  - @flyer.each do |manual|
+    .flyer__manual__box
+      = link_to manual_path(manual.id) do
+        = manual.name
 = render 'shared/footer'
