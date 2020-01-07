@@ -1,0 +1,28 @@
+= render 'shared/sub-header'
+
+.toukou-mainbox
+  .new-box
+    %h3 マニュアル更新
+  .toukou-box
+  = form_with model: @manual, method: :patch do |f|
+    .name-box3
+      = f.label :name do
+        マニュアルタイトルを入力してください
+      %div
+        = f.text_field :name, {class: 'input-text', placeholder: "マニュアル名（必須)"}
+    .category-box-new
+      = f.label :category do
+        マニュアルのカテゴリーを選択してください
+      %div
+        = f.select :category,[["接客・販売"],["カウンター内"],["清掃"],["発注"],["ロッピー"],["その他"]], prompt:"選択してくだい"
+    .pdf-area
+      %p PDFファイルを選択してくだい
+      = f.label :image do
+        .testo PDFファイルをドラッグ&クリックでアップロード
+      %div
+        = f.file_field :image,{class: 'input-image'}
+        %object.pdf{id: :img_prev}
+
+
+    %button{type: 'submit',class: 'submitBtn'}
+      変更する

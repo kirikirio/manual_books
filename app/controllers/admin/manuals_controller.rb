@@ -19,6 +19,19 @@ class Admin::ManualsController < ApplicationController
     @pdffile = Manual.find(params[:id]) 
   end
 
+  def edit
+    @manual = Manual.find(params[:id])
+    
+  end
+
+  def update
+    @manual = Manual.find(params[:id])
+    @manual.update(manual_params)
+  end
+
+  def delete
+  end
+
 
 
 
