@@ -14,7 +14,7 @@
     %section.new__items
       .new__items__container
         - @searches.each do |search|
-          = link_to manuals_path(search.id) do
+          = link_to manual_path(search.id) do
             .new__items__container__box
               .new__items__container__box__item_body
                 %h3
