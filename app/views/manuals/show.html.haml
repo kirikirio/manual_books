@@ -11,5 +11,6 @@
         - if current_user.admin?
           = link_to edit_admin_manual_path, method: :get do
             編集ページへ
-
+          =link_to admin_manual_path, method: :delete do
+            削除
   = render 'shared/footer'

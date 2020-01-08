@@ -15,10 +15,6 @@ class Admin::ManualsController < ApplicationController
     @manual.save
   end
 
-  def show
-    @pdffile = Manual.find(params[:id]) 
-  end
-
   def edit
     @manual = Manual.find(params[:id])
     
@@ -26,12 +22,22 @@ class Admin::ManualsController < ApplicationController
 
   def update
     @manual = Manual.find(params[:id])
-    @manual.update(manual_params)
+    if @manual.update(manual_params)
+      flash[:notice] = "更新しました"
+      redirect_to root_path
+    end
   end
 
   def delete
   end
 
+  def destroy
+    @manual = Manual.find(params[:id])
+    if @manual.destroy
+      flash[:notice] = "削除しました"
+      redirect_to root_path
+    end
+  end
 
 
 

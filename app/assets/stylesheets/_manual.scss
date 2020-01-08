@@ -1,3 +1,17 @@
+.notifications{
+  .notice{
+  background-color: rgb(250, 104, 60);
+  color: #fff;
+  text-align: center;
+  }
+
+  .success{
+    background-color: #F35500;;
+    color: #fff;
+    text-align: center;
+  }
+}
+
 header{
   height: 200px;
   display: flex;

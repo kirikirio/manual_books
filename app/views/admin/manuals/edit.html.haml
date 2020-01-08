@@ -4,7 +4,7 @@
   .new-box
     %h3 マニュアル更新
   .toukou-box
-  = form_with model: @manual, method: :patch do |f|
+  = form_with model: @manual,url: admin_manual_path,  method: :patch do |f|
     .name-box3
       = f.label :name do
         マニュアルタイトルを入力してください

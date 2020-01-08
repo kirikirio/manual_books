@@ -48,7 +48,7 @@
       %a.button{:href => "#index"} Topへ戻る
     .cofee__manual
       - @cofee.each do |manual|
-        .cofee__manuals__box
+        .cofee__manual__box
           = link_to manual_path(manual.id) do
             = manual.name
     .category-title

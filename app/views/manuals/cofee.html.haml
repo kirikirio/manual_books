@@ -4,9 +4,9 @@
   %span（発注）
   .cofee-setumei
     読みたいマニュアルをクリック👈
-.cofee__manuals
+.cofee__manual
   - @cofee.each do |manual|
-    .cofee__manuals__box
+    .cofee__manual__box
       = link_to manual_path(manual.id) do
         = manual.name
 = render 'shared/footer'

@@ -17,7 +17,7 @@ Rails.application.routes.draw do
   # get 'manual/index'
   # # get 'manual/new'
   # post 'manual/create'
-  resources :manuals, only: [:index, :create,:list,:show,:new] 
+  resources :manuals, only: [:index,:update,:create,:list,:show,:new] 
     
   namespace :admin do
     resources :manuals
