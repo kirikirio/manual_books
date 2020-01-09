@@ -1,0 +1,43 @@
+.new__items-genre{
+  text-align: center;
+  font-size:26px;
+  margin: 0 0 8px;
+  color:red;
+  font-weight: bold;
+  span{
+    font-size:16px;
+    color:black;
+  }
+}
+.list-search{
+  position: relative;
+  button{
+      position: absolute;
+      right: 180px;
+      top: 120px;
+      cursor: pointer;
+      border: none;
+      .fa-search{
+        font-size: 20px;
+      }
+    }
+  }
+  .serach-icon{
+
+    .search-box{
+      padding: 0 10px 0 15px;
+      bottom: 40px;
+      left: 120px;
+      height: 50px;
+      width: 500px;
+      border: solid gray;
+      text-align: left;
+      font-size:20px;
+      line-height: 50px;
+      border-radius: 80px;
+    }
+    .search-box:focus{
+      border: outset 1px rgb(3, 136, 212);
+      outline: none;
+    }
+  }

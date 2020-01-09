@@ -1,24 +1,25 @@
 = render 'shared/sub-header'
 - if @searches.present?
-  .search-box 
+  .list__search
     = form_with url: list_path, local: true do |form|
-      .contents__top__search--icon
-        = button_tag type: 'submit' do
-          = fa_icon 'search'
-      = form.text_field :search,{}
-  .content
-    %section.new__items
-      .new__items-genre
-        %h3
-          = "#{@search_word}  の検索結果"
-    %section.new__items
-      .new__items__container
-        - @searches.each do |search|
-          = link_to manual_path(search.id) do
-            .new__items__container__box
-              .new__items__container__box__item_body
-                %h3
-                  = search.name
+      .serach-icon
+        =  form.text_field :search, {class: 'search-box', placeholder: 'キーワードを入力して再度検索'}
+      = button_tag type: 'submit' do
+        = fa_icon 'search'
+    .content
+      %section.new__items
+        .new__items-genre
+          %h3
+            = "#{@search_word} "
+            %span の検索結果
+      %section.new__items
+        .new__items__container
+          - @searches.each do |search|
+            = link_to manual_path(search.id) do
+              .new__items__container__box
+                .new__items__container__box__item_body
+                  %h3
+                    = search.name
 
 - else
   .content
