@@ -2,6 +2,7 @@
   text-align: center;
   font-size:26px;
   margin: 0 0 8px;
+  line-height: 220px;
   color:red;
   font-weight: bold;
   span{
@@ -9,25 +10,23 @@
     color:black;
   }
 }
-.list-search{
+.serach-main-box{
   position: relative;
   button{
       position: absolute;
-      right: 180px;
-      top: 120px;
+      left: 820px;
+      top: 40px;
       cursor: pointer;
       border: none;
       .fa-search{
         font-size: 20px;
       }
     }
-  }
-  .serach-icon{
-
-    .search-box{
+  .search-box{
+    position: absolute;
+      bottom: -80px;
+      left: 350px;
       padding: 0 10px 0 15px;
-      bottom: 40px;
-      left: 120px;
       height: 50px;
       width: 500px;
       border: solid gray;

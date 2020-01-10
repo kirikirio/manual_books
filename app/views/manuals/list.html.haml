@@ -2,10 +2,10 @@
 - if @searches.present?
   .list__search
     = form_with url: list_path, local: true do |form|
-      .serach-icon
-        =  form.text_field :search, {class: 'search-box', placeholder: 'キーワードを入力して再度検索'}
-      = button_tag type: 'submit' do
-        = fa_icon 'search'
+      .serach-main-box
+        =  form.text_field :search, {class: 'search-box', placeholder: 'キーワードを入力して再検索'}
+        = button_tag type: 'submit' do
+          = fa_icon 'search'
     .content
       %section.new__items
         .new__items-genre
