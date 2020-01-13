@@ -16,7 +16,9 @@
       %div
         = f.select :category,[["接客・販売"],["カウンター内"],["清掃"],["発注"],["ロッピー"],["その他"]], prompt:"選択してくだい"
     .pdf-area
-      %p PDFファイルを選択してくだい
+      %p 
+        PDFファイルを選択してくだい
+        %span（最大２GBまでアップロード可能）
       = f.label :image do
         .testo PDFファイルをドラッグ&クリックでアップロード
       %div

@@ -58,6 +58,9 @@
       font-size:20px;
       font-weight: bold;
     }
+    span{
+      color:rgb(221, 27, 27);
+    }
     .testo{
       border: 1px dashed #ccc;
       line-height: 50px;
@@ -76,5 +79,6 @@
     margin-top:20px;
     height: 60px;
     width: 220px;
+    cursor:pointer;
   }
 }
