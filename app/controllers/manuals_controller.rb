@@ -18,8 +18,13 @@ class ManualsController < ApplicationController
   end
 
   def show
-    @manual = Manual.find(params[:id])
-    @pdffile = Manual.find(params[:id]) 
+    if user_signed_in?
+      @manual = Manual.find(params[:id])
+      @pdffile = Manual.find(params[:id]) 
+    else
+      flash[:notice] = "ログインしてください"
+      redirect_to  action: 'index'
+    end
   end
 
 
