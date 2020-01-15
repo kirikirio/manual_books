@@ -1,12 +1,18 @@
 class Admin::ManualsController < ApplicationController
-  before_action :admin_user
+  # before_action :admin_user
 
   def index
   end
 
   def new
+    if current_user.admin?
     @manual = Manual.new
-    @manuals = Manual.where(params[:id]) 
+    @manuals = Manual.where(params[:id])
+    else 
+      flash[:notice] = "管理者権限がありません"
+      redirect_to root_path
+    end
+      
   end
 
     def create
