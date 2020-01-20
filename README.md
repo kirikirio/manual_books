@@ -1,24 +1,11 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# マニュアルSearch
+コンビニのマニュアルを検索、PDFファイルとして閲覧、ダウンロード可能
+また管理者のみ新規マニュアルの投稿、削除、編集を行えるアプリケーション
+ 
+# Features
+ 
+ 実際の現場での使用を考えて、管理者機能の実装とPDFにて閲覧、ダウンロード可能にする工夫をしました。
+ AWSを用いて、デプロイしています
 
-Things you may want to cover:
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
